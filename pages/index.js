@@ -13,6 +13,7 @@ const Container = tw.div`
   w-screen
   h-screen
   bg-black
+  text-white
 `
 
 
