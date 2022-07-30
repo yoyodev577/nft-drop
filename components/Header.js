@@ -8,15 +8,17 @@ const Container = tw.div`
     justify-center
 `
 
-const HeaderContainer = tw.div``
+const HeaderContainer = tw.div`
+  mt-[10px]
+`
 
 const Header = () => {
   return (
     <Container>
         <HeaderContainer>
             <Image
-                width={150}
-                height={150}
+                width={120}
+                height={120}
                 src={Logo}
                 alt="Logo"
             />

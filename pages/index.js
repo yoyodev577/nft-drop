@@ -14,6 +14,7 @@ const Container = tw.div`
   h-screen
   bg-black
   text-white
+  px-5
 `
 
 

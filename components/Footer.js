@@ -8,9 +8,10 @@ const Container = tw.div`
   my-5
 `
 const FooterContainer = tw.div`
+  flex
   max-w-screen-lg
   w-full
-
+  justify-center
 `
 
 

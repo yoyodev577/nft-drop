@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import tw from "tailwind-styled-components";
 import { useAddress, useDisconnect, useMetamask, useEditionDrop } from "@thirdweb-dev/react";
+import ReactLoading from 'react-loading';
 
 
 const Container = tw.div`
@@ -23,7 +24,8 @@ const Title = tw.h2`
 const Mint =tw.div`
     max-w-screen-sm
     bg-black
-    mt-[-200px]
+    lg:w-1/3
+    md:w-1/2
     w-1/3
     flex
     flex-col
@@ -37,11 +39,14 @@ const ButtonContainer = tw.div`
     gap-4
 `
 const FilledButton = tw.button`
+    flex
+    justify-center
+    items-center
     flex-1
     bg-[#bfc500] hover:bg-white text-black font-bold py-2 px-4 rounded uppercase
 
 `
-//import properties
+//copy and paste other properties
 const UnfilledButton = tw(FilledButton)`
     bg-black
     text-[#bfc500]
@@ -49,11 +54,20 @@ const UnfilledButton = tw(FilledButton)`
     border-[#bfc500]
     hover:bg-[#bfc500]
     hover:text-black
-    h-15
+`
+const Count = tw.div`
+    flex
+    grow
+    items-center
+    justify-center
+
 `
 
-
 const Minting = () => {
+
+    const [totalSupply,setTotalSupply] = useState(0);
+    const [inProgress,setInProgress] = useState(false);
+    const [completed, setCompleted] = useState(false);
 
     const connectWithMetamask = useMetamask();
     const disconnectWithMetamask = useDisconnect();
@@ -64,17 +78,37 @@ const Minting = () => {
 
     const mint = async () => {
         if(editionDrop && address){
+
+            try{
+            setInProgress(true);
             const tx = await editionDrop.claimTo(address,0,1);
-            console.log(tx);
+            setInProgress(false);
+            setCompleted(true);
+            }
+            catch(error){
+                console.log(error);
+                resetMinting();
+            }
         }
     }
 
+    const viewOpenSea = () =>{
+        const url="https://testnets.opensea.io/collection/testdemo-vcodftmlug";
+        window.open(url,"_blank");
+    }
+
+    const resetMinting = () =>{
+        setInProgress(false);
+        setCompleted(false);
+        disconnectWithMetamask();
+    }
     // update when it changes
     useEffect(()=> {
         const getTotal = async() => {
             if(editionDrop){
                 const total = await editionDrop.totalSupply(0);
                 console.log(total.toNumber());
+                setTotalSupply(total.toNumber());
             }
         }
         getTotal();
@@ -86,16 +120,37 @@ const Minting = () => {
         <Mint>
             <TitleContainer>
                 <Title>Welcome to <br /> Be  a Cat Servant</Title>
+                <Count>
+                {
+                    address && totalSupply
+                }
+
+                </Count>
             </TitleContainer> 
         <ButtonContainer>
             {
                 address? 
                 <>
-                   <FilledButton onClick={mint} >
-                        Mint
-                    </FilledButton>
+                    {
+                        completed
+                        ? <FilledButton onClick={viewOpenSea}>
+                            View Opensea
+                        </FilledButton>
+                        :
+                        <FilledButton 
+                        disabled={inProgress}
+                        onClick={mint}>
+                            {
+                                inProgress
+                                ?<ReactLoading type='bubbles' color='black' height={64} />
+                                :<>Mint</>
+                            }
+                        </FilledButton>
+                    }
                 
-                    <UnfilledButton onClick={disconnectWithMetamask} >
+                    <UnfilledButton 
+                        disabled={inProgress}
+                        onClick={resetMinting}>
                         Disconnect
                     </UnfilledButton>
                 </>
