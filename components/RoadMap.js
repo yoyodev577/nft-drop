@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+import roadmap from "../assets/roadmap.png"
 import tw from "tailwind-styled-components"
 
 const Container = tw.div`
@@ -17,6 +19,7 @@ const TitleContainer = tw.div`
 const Title = tw.h2`
     uppercase
     text-3xl
+    text-white
     font-bold
     
 `
@@ -28,18 +31,22 @@ const ContentContainer = tw.div`
 `
 
 
-
 const ContentHeader =tw.h3`
+    flex
+    flex-col
     mr-10
-    
+    text-white
 
 `
 
 const Content = tw.h3`
-    
     uppercase
+    text-white
 
 `
+
+const ContentImage = tw.div``
+
 
 const RoadMap = () => {
   return (
@@ -49,8 +56,17 @@ const RoadMap = () => {
         </TitleContainer>
 
         <ContentContainer>
-            <ContentHeader>Phrase 1</ContentHeader>
-            <Content>Expand the team <br /> Launch the website and discord </Content>
+     
+            <ContentImage>
+                <Image
+                    width={1400}
+                    height={787}
+                    src={roadmap}
+                    alt="roadmap"
+                />
+
+            </ContentImage>
+            
          </ContentContainer>
     </Container>
 

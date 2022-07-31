@@ -16,6 +16,7 @@ const TitleContainer = tw.div`
 const Title = tw.h2`
     uppercase
     text-1xl
+    text-white
     italic
     font-bold
     mt-3
@@ -124,7 +125,7 @@ const Minting = () => {
     <Container>
         <Mint>
             <TitleContainer>
-                <Title>Welcome to <br /> explore the cat's civilizations</Title>
+                <Title>Join Us</Title>
                 <Count>
                 {
                     address && totalSupply
