@@ -5,10 +5,18 @@ import city from "../assets/city.png"
 import photo from "../assets/photo.png"
 
 const Container = tw.div` 
+    flex
+    flex-col
+    justify-center
+    items-center
 
+  
 `
 
-const BackgroundContainer = tw.div``
+const BackgroundContainer = tw.div`
+    flex
+
+`
 
 
 const HomeContent = () => {
