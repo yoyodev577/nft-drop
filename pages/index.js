@@ -8,6 +8,7 @@ import Main from '../components/Main'
 import Footer from '../components/Footer'
 
 import tw from "tailwind-styled-components"
+import RoadMap from '../components/RoadMap'
 
 const Container = tw.div`
   w-screen
@@ -32,6 +33,7 @@ export default function Home() {
       />
       <Header />
       <Main />
+      <RoadMap />
       <Footer />
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import tw from "tailwind-styled-components";
+import Clients from './Clients';
 
 
 const Container = tw.div`
@@ -14,12 +15,13 @@ const FooterContainer = tw.div`
   justify-center
 `
 
+// A limited NFT collection where the token itself doubles as your membership to join cat servant's club. <br />Join Us
 
 const Footer = () => {
   return (
     <Container>
       <FooterContainer>
-        A limited NFT collection where the token itself doubles as your membership to join cat servant's club. <br />Join Us
+          <Clients />
       </FooterContainer>
 
     </Container>

@@ -15,7 +15,7 @@ const TitleContainer = tw.div`
 `
 const Title = tw.h2`
     uppercase
-    text-3xl
+    text-1xl
     italic
     font-bold
     mt-3
@@ -43,7 +43,12 @@ const FilledButton = tw.button`
     justify-center
     items-center
     flex-1
-    bg-[#bfc500] hover:bg-white text-black font-bold py-2 px-4 rounded uppercase
+    bg-black
+    border-2
+    text-white
+
+    hover:bg-white 
+    hover:text-black font-bold py-2 px-4 rounded uppercase
 
 `
 //copy and paste other properties
@@ -119,7 +124,7 @@ const Minting = () => {
     <Container>
         <Mint>
             <TitleContainer>
-                <Title>Welcome to <br /> Be  a Cat Servant</Title>
+                <Title>Welcome to <br /> explore the cat's civilizations</Title>
                 <Count>
                 {
                     address && totalSupply

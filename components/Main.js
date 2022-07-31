@@ -3,6 +3,7 @@ import tw from "tailwind-styled-components"
 import Minting from './Minting'
 import Image from 'next/image'
 import Gallery from '../assets/gallery.jpg'
+import RoadMap from './RoadMap'
 
 
 const Container = tw.div`
