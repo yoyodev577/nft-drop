@@ -5,8 +5,7 @@ import ReactLoading from 'react-loading';
 
 
 const Container = tw.div`
-    max-w-screen-lg
-    w-full
+    max-w-screen
     z-50
 `
 
@@ -23,15 +22,12 @@ const Title = tw.h2`
 `
 
 const Mint =tw.div`
-    max-w-screen-sm
-    bg-black
-    lg:w-1/3
-    md:w-1/2
-    w-1/3
+    max-w-screen
     flex
     flex-col
-    pb-4
-    pr-4
+    items-center
+    bg-black
+
 `
 
 const ButtonContainer = tw.div`

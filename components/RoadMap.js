@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import roadmap from "../assets/roadmap.png"
+import roadmap from "../assets/roadmap2.png"
 import tw from "tailwind-styled-components"
 
 const Container = tw.div`
@@ -59,8 +59,8 @@ const RoadMap = () => {
      
             <ContentImage>
                 <Image
-                    width={1400}
-                    height={787}
+                    width={1080}
+                    height={1620}
                     src={roadmap}
                     alt="roadmap"
                 />
