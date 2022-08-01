@@ -1,6 +1,7 @@
 import React from 'react'
 import tw from "tailwind-styled-components"
 import Image from 'next/image'
+import gallery from '../assets/gallery.jpg'
 import city from "../assets/city.png"
 import photo from "../assets/photo.png"
 import NavBar from './NavBar'
@@ -23,8 +24,8 @@ const HomeContent = () => {
       <NavBar />
         <BackgroundContainer>
             <Image
-            src={photo}
-            alt="city"
+            src={gallery}
+            alt="gallery"
             />
         </BackgroundContainer>
     </Container>
