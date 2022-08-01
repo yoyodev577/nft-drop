@@ -7,10 +7,10 @@ import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
-import MintPage from './homepage'
+import MintPage from './home'
 
 import tw from "tailwind-styled-components"
-import RoadMap from '../components/RoadMap'
+import RoadMap from './roadmap'
 
 const Container = tw.div`
   w-screen

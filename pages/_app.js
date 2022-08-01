@@ -4,6 +4,9 @@ import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 
 const activeChainId = ChainId.Rinkeby;
 
+const isServer = () => typeof window === 'undefined';
+
+
 function MyApp({ Component, pageProps }) {
   return (
     <ThirdwebProvider desiredChainId={activeChainId}>

@@ -3,18 +3,16 @@ import tw from "tailwind-styled-components"
 import Image from 'next/image'
 import city from "../assets/city.png"
 import photo from "../assets/photo.png"
+import NavBar from './NavBar'
 
 const Container = tw.div` 
-    flex
-    flex-col
-    justify-center
-    items-center
-
+  
   
 `
 
 const BackgroundContainer = tw.div`
     flex
+    justify-center
 
 `
 
@@ -22,6 +20,7 @@ const BackgroundContainer = tw.div`
 const HomeContent = () => {
   return (
     <Container>
+      <NavBar />
         <BackgroundContainer>
             <Image
             src={photo}

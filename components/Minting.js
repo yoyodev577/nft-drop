@@ -12,7 +12,7 @@ const Container = tw.div`
 const TitleContainer = tw.div`
     flex
 `
-const Title = tw.h2`
+const Title = tw.div`
     uppercase
     text-1xl
     text-white

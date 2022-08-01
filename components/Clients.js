@@ -19,9 +19,6 @@ const ClientsContainer =tw.div`
     space-x-3
 
 `
-const Client = tw.div`
-
-`
 
 const Clients = () => {
 

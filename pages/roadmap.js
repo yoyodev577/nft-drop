@@ -16,7 +16,7 @@ const TitleContainer = tw.div`
     
 `
 
-const Title = tw.h2`
+const Title = tw.div`
     uppercase
     text-3xl
     text-white
@@ -31,7 +31,7 @@ const ContentContainer = tw.div`
 `
 
 
-const ContentHeader =tw.h3`
+const ContentHeader =tw.div`
     flex
     flex-col
     mr-10
@@ -39,7 +39,7 @@ const ContentHeader =tw.h3`
 
 `
 
-const Content = tw.h3`
+const Content = tw.div`
     uppercase
     text-white
 
@@ -50,7 +50,8 @@ const ContentImage = tw.div``
 
 const RoadMap = () => {
   return (
-    <Container>
+
+    <Container id="roadmap">
         <TitleContainer>
             <Title>RoadMap</Title>
         </TitleContainer>
@@ -69,7 +70,6 @@ const RoadMap = () => {
             
          </ContentContainer>
     </Container>
-
   )
 }
 

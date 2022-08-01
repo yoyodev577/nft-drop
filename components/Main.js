@@ -3,10 +3,9 @@ import tw from "tailwind-styled-components"
 import Minting from './Minting'
 import Image from 'next/image'
 import Gallery from '../assets/gallery.jpg'
-import RoadMap from './RoadMap'
+import RoadMap from '../pages/roadmap'
 
 import Link from 'next/link'
-import MintPage from '../pages/homepage'
 
 
 const Container = tw.div`
@@ -27,7 +26,7 @@ const TitleContainer = tw.div`
 const Video = tw.video``
 
 
-const Title = tw.h2`
+const Title = tw.div`
     uppercase
     text-1xl
     italic
@@ -66,7 +65,7 @@ const Main = () => {
         </TitleContainer>
 
         <ButtonContainer>
-          <Link href='/homepage'>
+          <Link href='/home'>
             <a>
                 <FilledButton>
                     More

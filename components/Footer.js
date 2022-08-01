@@ -21,7 +21,6 @@ const Footer = () => {
   return (
     <Container>
       <FooterContainer>
-          <Clients />
       </FooterContainer>
 
     </Container>
