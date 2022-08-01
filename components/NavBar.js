@@ -3,9 +3,7 @@ import Image from 'next/dist/client/image'
 import tw from 'tailwind-styled-components'
 import Header from './Header'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import About from '../pages/About'
-import styled from 'styled-components'
+
 
 import Logo from '../assets/logo.png'
 
