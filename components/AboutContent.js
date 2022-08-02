@@ -25,10 +25,11 @@ const Title = tw.div`
 
 const Content = tw.div`
     flex
+    p-3
     justify-center
     text-center
     text-white
-    text-3xl
+    text-2xl
     uppercase
 `
 
@@ -45,7 +46,7 @@ const AboutContent = () => {
         <Content>Catshadow-graph is a collection of 1111 randomly generated on the polygon blockchain 
         Each photograph is unique and comes with cat inside the shadow city.
         </Content> 
-        
+
         <BackgroundContainer>
             <Image
             src={photo}

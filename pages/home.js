@@ -6,6 +6,8 @@ import RoadMap from './roadmap'
 import Footer from '../components/Footer'
 import About from './about'
 import HomeContent from '../components/HomeContent'
+import Team from './team'
+import FAQ from './faq'
 
 const Container =tw.div``
 
@@ -17,7 +19,8 @@ export default function HomePage () {
             <Minting />
             <About />
             <RoadMap />
-            <Footer />
+            <Team />
+            <FAQ />
         </Container>
     )
 }

@@ -18,10 +18,11 @@ const IconContainer = tw.div`
 `
 
 const NavContainer = tw.div`
+    p-3
     flex
     space-x-5
-
-    text-3xl
+    font-bold
+    text-2xl
     text-white
     uppercase
 
@@ -41,14 +42,28 @@ const NavBar = () => {
             />
         </IconContainer>
         <NavContainer>
+
             <Link href='#about' scroll={true}>
                 <a>
                     About
                 </a>
             </Link>
+
             <Link href='#roadmap' scroll={true}>
                 <a>
                     RoadMap
+                </a>
+            </Link>
+
+            <Link href='#team' scroll={true}>
+                <a>
+                    Team
+                </a>
+            </Link>
+
+            <Link href='#faq' scroll={true}>
+                <a>
+                    FAQ
                 </a>
             </Link>
 

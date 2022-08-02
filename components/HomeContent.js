@@ -6,6 +6,9 @@ import city from "../assets/city.png"
 import photo from "../assets/photo.png"
 import NavBar from './NavBar'
 
+import {Canvas} from "@react-three/fiber"
+import GalleryModels from './GalleryModels'
+
 const Container = tw.div` 
   
   

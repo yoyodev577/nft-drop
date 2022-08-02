@@ -61,14 +61,14 @@ const Main = () => {
         </VideoContainer>
 
         <TitleContainer>
-          <Title>Welcome to explore the cat's civilizations</Title>
+          <Title>Welcome to the Cat Servants Club</Title>
         </TitleContainer>
 
         <ButtonContainer>
           <Link href='/home'>
             <a>
                 <FilledButton>
-                    More
+                    Explore
                 </FilledButton>
               </a>
             </Link>

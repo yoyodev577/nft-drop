@@ -1,6 +1,7 @@
 import React from 'react';
 import tw from "tailwind-styled-components";
 import Clients from './Clients';
+import Teams from '../pages/team';
 
 
 const Container = tw.div`
@@ -21,7 +22,6 @@ const Footer = () => {
   return (
     <Container>
       <FooterContainer>
-        <Clients />
       </FooterContainer>
 
     </Container>

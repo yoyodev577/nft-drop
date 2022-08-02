@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.19.2",
+    "@react-three/fiber": "^8.2.2",
     "@thirdweb-dev/react": "^2.5.1",
     "@thirdweb-dev/sdk": "^2.3.32",
     "ethers": "^5.6.9",
@@ -17,7 +19,8 @@
     "react-dom": "18.2.0",
     "react-loading": "^2.0.3",
     "styled-components": "^5.3.5",
-    "tailwind-styled-components": "^2.1.8"
+    "tailwind-styled-components": "^2.1.8",
+    "three": "^0.143.0"
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.25",
