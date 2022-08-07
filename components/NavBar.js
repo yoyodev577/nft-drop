@@ -3,14 +3,15 @@ import Image from 'next/dist/client/image'
 import tw from 'tailwind-styled-components'
 import Header from './Header'
 import Link from 'next/link'
-
-
 import Logo from '../assets/logo.png'
+
+import Discord from '../assets/discord.png'
+import Twitter from '../assets/Twitter.png'
 
 const Container = tw.div`
     flex
     justify-between
-    p-3
+    p-2
 `
 
 const IconContainer = tw.div`
@@ -18,16 +19,21 @@ const IconContainer = tw.div`
 `
 
 const NavContainer = tw.div`
-    p-3
+    p-1
     flex
     space-x-5
     font-bold
     text-2xl
     text-white
     uppercase
-
-    
 `
+const CommunityContainer = tw.div`
+    flex
+    space-x-3
+
+`
+
+
 
 const NavBar = () => {
 
@@ -43,31 +49,64 @@ const NavBar = () => {
         </IconContainer>
         <NavContainer>
 
-            <Link href='#about' scroll={true}>
+            <Link href='home#about' scroll={true}>
                 <a>
                     About
                 </a>
             </Link>
 
-            <Link href='#roadmap' scroll={true}>
+            <Link href="home#project">
+                <a>
+                    Project
+                </a>
+            </Link> 
+
+            <Link href='home#roadmap' scroll={true}>
                 <a>
                     RoadMap
                 </a>
             </Link>
 
-            <Link href='#team' scroll={true}>
+            <Link href='home#team' scroll={true}>
                 <a>
                     Team
                 </a>
             </Link>
 
-            <Link href='#faq' scroll={true}>
+            <Link href='home#faq' scroll={true}>
                 <a>
                     FAQ
                 </a>
+            </Link>          
+        </NavContainer>
+
+        <CommunityContainer>
+
+            <Link href="https://discord.gg/qBRDFxcX">
+                <a>
+                    <Image
+                    width={40}
+                    height={48}
+                    src={Discord}
+                    alt="Discord"
+                    />
+                </a>
             </Link>
 
-        </NavContainer>
+            <Link href="https://twitter.com/catboss21397820">
+                <a>
+                    <Image
+                    width={50}
+                    height={40}
+                    src={Twitter}
+                    alt="Twitter"
+                    />
+                </a>
+
+            </Link>
+
+
+        </CommunityContainer>
 
     </Container>
 

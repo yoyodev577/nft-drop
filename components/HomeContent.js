@@ -17,6 +17,7 @@ const Container = tw.div`
 const BackgroundContainer = tw.div`
     flex
     justify-center
+    items-center
 
 `
 

@@ -12,7 +12,7 @@ const Team = () => {
   return (
     <Container id="team">
         <Title>
-          Team :Yoyo
+          Team :Yoyo , Audrey
       </Title>
      </Container>
   )

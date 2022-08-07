@@ -5,6 +5,7 @@ import Minting from '../components/Minting'
 import RoadMap from './roadmap'
 import Footer from '../components/Footer'
 import About from './about'
+import Project from './project'
 import HomeContent from '../components/HomeContent'
 import Team from './team'
 import FAQ from './faq'
@@ -16,8 +17,8 @@ export default function HomePage () {
     return(
         <Container>
             <HomeContent />
-            <Minting />
             <About />
+            <Project />
             <RoadMap />
             <Team />
             <FAQ />

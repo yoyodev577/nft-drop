@@ -37,6 +37,7 @@ const ButtonContainer = tw.div`
 `
 const FilledButton = tw.button`
     flex
+    py-3
     justify-center
     items-center
     flex-1
@@ -121,7 +122,7 @@ const Minting = () => {
     <Container>
         <Mint>
             <TitleContainer>
-                <Title>Join Us</Title>
+                <Title>Mint Now</Title>
                 <Count>
                 {
                     address && totalSupply
