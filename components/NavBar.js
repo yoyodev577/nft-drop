@@ -15,7 +15,7 @@ const Container = tw.div`
 `
 
 const IconContainer = tw.div`
-    
+    flex
 `
 
 const NavContainer = tw.div`
@@ -55,7 +55,7 @@ const NavBar = () => {
                 </a>
             </Link>
 
-            <Link href="home#project">
+            <Link href="/project">
                 <a>
                     Project
                 </a>

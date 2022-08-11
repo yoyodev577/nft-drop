@@ -45,6 +45,7 @@ const BackgroundContainer = tw.div`
 const project = () => {
   return (
     <Container id="project">
+        <NavBar />
         <Title>Cats-dow-graph</Title>
             <Content>Cats-dow-graph is a collection of 3333 NFTs  on the polygon blockchain.
             <br /> Each shadowgraph is unique which owns Cat Servants Club's membership <br /> and grants access to member-only benefits.

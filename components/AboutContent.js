@@ -5,6 +5,7 @@ import gallery from '../assets/gallery.jpg'
 import photo from "../assets/photo.png"
 import city from "../assets/city.png"
 import cat from "../assets/cat.png"
+import city3d from "../assets/3dcity.png"
 
 
 const Container = tw.div`
@@ -26,17 +27,19 @@ const Title = tw.div`
 `
 
 const BackgroundContainer = tw.div`
-    relative
+    flex
+    justify-center
 `
 
 const Content = tw.div`
-    absolute
-    top-3 
+    flex
+    justify-center 
+    p-3
     text-white
-    text-2xl
-    uppercase
+    text-3xl
     font-bold
 `
+const Text = tw.div``
 
 
 const AboutContent = () => {
@@ -45,23 +48,21 @@ const AboutContent = () => {
       <Title>
         About Us
       </Title>
-      <BackgroundContainer>
-        <Image
-          src={city}
-          alt="city"
-        />
-        <Content>
-          Cat Servants Club is the community of cat servants ,<br /> which brings a new perspective of cat civilization in the metaverse. 
-          <br />Cats are the best dominators of the world -- No..to the moon!  In the metaverse! <br />
-        
-        <Image
-        width={420}
-        height={380}
-        src={cat}
-        alt="cat"
-        />
-        
-        </Content>
+      <Content>  
+          <Image
+              width={500}
+              height={400}
+              src={city3d}
+              alt="city"
+          />
+          <Text>
+            Cat Servants Club is the community of cat servants ,<br /> which brings a new perspective of cat civilization in the metaverse. 
+            <br />Cats are the best dominators of the world -- No..to the moon!  In the metaverse! <br />
+          </Text>
+      </Content>
+      <BackgroundContainer>  
+
+
       </BackgroundContainer>
 
     </Container>

@@ -18,7 +18,6 @@ export default function HomePage () {
         <Container>
             <HomeContent />
             <About />
-            <Project />
             <RoadMap />
             <Team />
             <FAQ />

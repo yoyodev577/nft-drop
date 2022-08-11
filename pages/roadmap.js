@@ -57,16 +57,7 @@ const RoadMap = () => {
         </TitleContainer>
 
         <ContentContainer>
-     
-            <ContentImage>
-                <Image
-                    width={1080}
-                    height={1620}
-                    src={roadmap}
-                    alt="roadmap"
-                />
-
-            </ContentImage>
+            <ContentHeader>CSC Community</ContentHeader>
             
          </ContentContainer>
     </Container>
