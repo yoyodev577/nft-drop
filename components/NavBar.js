@@ -16,6 +16,7 @@ const Container = tw.div`
 
 const IconContainer = tw.div`
     flex
+    justify-start
 `
 
 const NavContainer = tw.div`
@@ -41,21 +42,22 @@ const NavBar = () => {
     <Container>
         <IconContainer>
             <Image
-                width={150}
-                height={150}
+                width={50}
+                height={50}
                 src={Logo}
                 alt="logo"
             />
         </IconContainer>
         <NavContainer>
 
-            <Link href='home#about' scroll={true}>
+            <Link href="/">
                 <a>
-                    About
+                    Intro
                 </a>
-            </Link>
+            </Link> 
 
-            <Link href="/project">
+
+            <Link href="home#project">
                 <a>
                     Project
                 </a>
@@ -104,8 +106,6 @@ const NavBar = () => {
                 </a>
 
             </Link>
-
-
         </CommunityContainer>
 
     </Container>

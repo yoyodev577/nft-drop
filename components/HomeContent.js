@@ -22,16 +22,15 @@ const BackgroundContainer = tw.div`
 
 `
 
+const Video = tw.video``
+
 
 const HomeContent = () => {
   return (
     <Container>
       <NavBar />
         <BackgroundContainer>
-            <Image
-            src={gallery}
-            alt="gallery"
-            />
+          <Video src={"./bg-video-3.mp4/"} muted={true} autoPlay={true} loop={true}/>
         </BackgroundContainer>
     </Container>
   )

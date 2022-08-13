@@ -36,7 +36,8 @@ const Content = tw.div`
     justify-center 
     p-3
     text-white
-    text-3xl
+    text-center
+    text-2xl
     font-bold
 `
 const Text = tw.div``
@@ -45,16 +46,8 @@ const Text = tw.div``
 const AboutContent = () => {
   return (
     <Container>
-      <Title>
-        About Us
-      </Title>
+ 
       <Content>  
-          <Image
-              width={500}
-              height={400}
-              src={city3d}
-              alt="city"
-          />
           <Text>
             Cat Servants Club is the community of cat servants ,<br /> which brings a new perspective of cat civilization in the metaverse. 
             <br />Cats are the best dominators of the world -- No..to the moon!  In the metaverse! <br />
