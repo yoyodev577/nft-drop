@@ -10,6 +10,7 @@ import Twitter from '../assets/Twitter.png'
 
 const Container = tw.div`
     flex
+    min-w-fit
     justify-center
     p-3
     py-5

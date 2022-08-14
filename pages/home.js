@@ -10,7 +10,9 @@ import HomeContent from '../components/HomeContent'
 import Team from './team'
 import FAQ from './faq'
 
-const Container =tw.div``
+const Container =tw.div`
+    min-w-fit
+`
 
 
 export default function HomePage () {

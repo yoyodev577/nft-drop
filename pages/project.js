@@ -4,10 +4,12 @@ import tw from "tailwind-styled-components"
 import photo from "../assets/photo.png"
 import Minting from '../components/Minting'
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 
 const Container = tw.div`
     flex
     flex-col
+    min-w-fit
 
 `
 
@@ -53,6 +55,7 @@ const project = () => {
 
             </Content> 
 
+            <Minting />
         <BackgroundContainer>
             <Image
             src={photo}
@@ -60,8 +63,7 @@ const project = () => {
             />
         </BackgroundContainer>
 
-        <Minting />
-
+        <Footer />
     </Container>
   )
 }
