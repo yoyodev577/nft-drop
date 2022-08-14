@@ -2,12 +2,13 @@ import React from 'react'
 import Image from 'next/image'
 import roadmap from "../assets/roadmap2.png"
 import tw from "tailwind-styled-components"
+import NavBar from '../components/NavBar'
 
 const Container = tw.div`
     flex
     flex-col
     space-y-5
-    pt-5
+    py-5
 `
 
 const GridContainer =tw.div`
@@ -30,28 +31,26 @@ const Title = tw.div`
     text-5xl
     text-white
     font-bold
-    
 `
 
 const ContentContainer = tw.div`
     flex
     flex-col
     text-center
-    pt-5
+    py-10
 `
 
 
 const ContentHeader =tw.div`
-    text-2xl
+    text-3xl
     text-white
     uppercase
     font-bold
 `
 
 const ContentText = tw.h2`
-    uppercase
     text-white
-    text-1xl
+    text-2xl
 
 `
 
@@ -62,7 +61,7 @@ const RoadMap = () => {
   return (
 
     <Container id="roadmap">
-
+        <NavBar />
         <TitleContainer>
             <Title>RoadMap</Title>
         </TitleContainer>

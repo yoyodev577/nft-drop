@@ -3,6 +3,7 @@ import tw from "tailwind-styled-components"
 import Image from 'next/image'
 import gallery from '../assets/gallery.jpg'
 import city from "../assets/city.png"
+import citygif from "../assets/city.gif"
 import photo from "../assets/photo.png"
 import NavBar from './NavBar'
 
@@ -12,13 +13,13 @@ import GalleryModels from './GalleryModels'
 
 const Container = tw.div` 
   
-  
 `
 
 const BackgroundContainer = tw.div`
     flex
     justify-center
     items-center
+    py-5
 
 `
 
@@ -30,7 +31,7 @@ const HomeContent = () => {
     <Container>
       <NavBar />
         <BackgroundContainer>
-          <Video src={"./bg-video-3.mp4/"} muted={true} autoPlay={true} loop={true}/>
+          <Video src={"./bg-video-2.mp4/"} muted={true} autoPlay={true} loop={true}/>
         </BackgroundContainer>
     </Container>
   )
