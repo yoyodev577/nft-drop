@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import tw from "tailwind-styled-components";
-import { useAddress, useDisconnect, useMetamask, useEditionDrop, useNFTDrop } from "@thirdweb-dev/react";
+import { useAddress, useDisconnect, useMetamask, useEditionDrop, useNFTDrop, ChainId } from "@thirdweb-dev/react";
 import ReactLoading from 'react-loading';
 
 
@@ -77,6 +77,7 @@ const Minting = () => {
     const address = useAddress();
 
     const contract = useNFTDrop("0x5769397437fC4f6C0E16692a9C1499a486878E59");
+    const tokenId =0;
     const quantity = 1;
 
     
@@ -89,7 +90,7 @@ const Minting = () => {
             setInProgress(true);
             const data = await contract.claimTo(address,quantity);
             const receipt = tx.receipt;
-            const claimedTokenId = tx.id;
+            tokenId = tx.id;
             const claimedNFT = await tx.data();
             setInProgress(false);
             setCompleted(true);
@@ -101,15 +102,25 @@ const Minting = () => {
     }
 
     const viewOpenSea = () =>{
-        const url="https://testnets.opensea.io/collection/testdemo-vcodftmlug";
+        const contractAddress ="0x5769397437fC4f6C0E16692a9C1499a486878E59";
+        const chain ="mumbai";
+        const url=`https://testnets.opensea.io/assets/${chain}/${contractAddress}/${tokenId}`;
         window.open(url,"_blank");
     }
+
+    const viewOwnedNFT = async () => {
+        
+        const nfts = await contract.getOwned(address);
+        console.log(nfts);
+    }
+
 
     const resetMinting = () =>{
         setInProgress(false);
         setCompleted(false);
         disconnectWithMetamask();
     }
+
     // update when it changes
     useEffect(()=> {
         const getTotal = async() => {
@@ -154,13 +165,19 @@ const Minting = () => {
                                 :<>Mint</>
                             }
                         </FilledButton>
+                        
                     }
+                
                 
                     <UnfilledButton 
                         disabled={inProgress}
                         onClick={resetMinting}>
                         Disconnect
                     </UnfilledButton>
+
+                    <FilledButton onClick={viewOpenSea}>
+                            View Opensea
+                        </FilledButton>
                 </>
                 : <FilledButton onClick={connectWithMetamask} >
                     Connect Wallet
