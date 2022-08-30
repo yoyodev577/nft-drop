@@ -14,6 +14,9 @@ import GalleryModels from './GalleryModels'
 const Container = tw.div` 
   
 `
+const Background = tw.div`
+  bg-fixed
+`
 
 const BackgroundContainer = tw.div`
     flex
@@ -30,9 +33,10 @@ const HomeContent = () => {
   return (
     <Container>
       <NavBar />
-        <BackgroundContainer>
-          <Video src={"./bg-video-2.mp4/"} muted={true} autoPlay={true} loop={true}/>
-        </BackgroundContainer>
+      <BackgroundContainer>
+        <Video src={"./bg-video-2.mp4/"} muted={true} autoPlay={true} loop={true}/>
+      </BackgroundContainer>
+
     </Container>
   )
 }

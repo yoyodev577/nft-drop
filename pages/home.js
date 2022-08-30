@@ -9,18 +9,24 @@ import Project from './project'
 import HomeContent from '../components/HomeContent'
 import Team from './team'
 import FAQ from './faq'
+import { Cursor } from '../components/Cursor'
 
 const Container =tw.div`
     min-w-fit
 `
 
 
+
 export default function HomePage () {
     return(
+
         <Container>
+            <Cursor />
             <HomeContent />
             <About />
             <Footer />
+            <Cursor />
         </Container>
+
     )
 }

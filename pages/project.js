@@ -5,6 +5,7 @@ import photo from "../assets/photo.png"
 import Minting from '../components/Minting'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
+import city from '../assets/3dcity2.png'
 
 const Container = tw.div`
     flex
@@ -41,7 +42,7 @@ const BackgroundContainer = tw.div`
     flex
     justify-center
     items-center
-
+    py-5
 `
 
 
@@ -57,10 +58,14 @@ const project = () => {
 
             <Minting />
         <BackgroundContainer>
+            
             <Image
+            width={843}
+            height={500}
             src={photo}
             alt="photo"
             />
+    
         </BackgroundContainer>
 
         <Footer />

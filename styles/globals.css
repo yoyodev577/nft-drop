@@ -1,12 +1,21 @@
 html,
 body {
+  background: 
+  url(../assets/city.png) no-repeat center center fixed,
+  url(../assets/cat.png) no-repeat bottom left fixed;
+  background-size: 80% , 20%;
   background-color: black;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+  cursor: auto;
+  }
 
+  .hover-this:hover ~ .cursor {
+    transform:translate(-50%, -50%) scale(8);
+  }
+  
 a {
   color: inherit;
   text-decoration: none;
@@ -25,6 +34,8 @@ a {
     background: black;
   }
 }
+
+
 
 @tailwind base;
 @tailwind components;

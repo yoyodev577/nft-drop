@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import tw from "tailwind-styled-components";
-import { useAddress, useDisconnect, useMetamask, useEditionDrop } from "@thirdweb-dev/react";
+import { useAddress, useDisconnect, useMetamask, useEditionDrop, useNFTDrop } from "@thirdweb-dev/react";
 import ReactLoading from 'react-loading';
 
 
@@ -75,21 +75,26 @@ const Minting = () => {
     const connectWithMetamask = useMetamask();
     const disconnectWithMetamask = useDisconnect();
     const address = useAddress();
-    const editionDrop = useEditionDrop("0x60690480862d2884593478259B716D600fA40068");
+
+    const contract = useNFTDrop("0x5769397437fC4f6C0E16692a9C1499a486878E59");
+    const quantity = 1;
+
     
     console.log(address)
 
     const mint = async () => {
-        if(editionDrop && address){
+        if(contract && address){
 
             try{
             setInProgress(true);
-            const tx = await editionDrop.claimTo(address,0,1);
+            const data = await contract.claimTo(address,quantity);
+            const receipt = tx.receipt;
+            const claimedTokenId = tx.id;
+            const claimedNFT = await tx.data();
             setInProgress(false);
             setCompleted(true);
             }
             catch(error){
-                console.log(error);
                 resetMinting();
             }
         }
@@ -108,14 +113,14 @@ const Minting = () => {
     // update when it changes
     useEffect(()=> {
         const getTotal = async() => {
-            if(editionDrop){
-                const total = await editionDrop.totalSupply(0);
+            if(contract){
+                const total = await contract.totalClaimedSupply();
                 console.log(total.toNumber());
                 setTotalSupply(total.toNumber());
             }
         }
         getTotal();
-    },[editionDrop])
+    },[contract])
 
 
   return (
