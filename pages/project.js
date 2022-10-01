@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
 import tw from "tailwind-styled-components"
-import photo from "../assets/photo.png"
+import photo from "../assets/photo_01.png"
 import Minting from '../components/Minting'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-import city from '../assets/3dcity2.png'
+import Catsdowgraph from '../components/catsdowgraph'
 
 const Container = tw.div`
     flex
@@ -50,24 +50,8 @@ const project = () => {
   return (
     <Container id="project">
         <NavBar />
-        <Title>Cats-dow-graph</Title>
-            <Content>Cats-dow-graph is a collection of 3333 NFTs  on the polygon blockchain.
-            <br /> Each shadowgraph is unique which owns Cat Servants Club's membership <br /> and grants access to member-only benefits.
-
-            </Content> 
-
-            <Minting />
-        <BackgroundContainer>
+            <Catsdowgraph />
             
-            <Image
-            width={843}
-            height={500}
-            src={photo}
-            alt="photo"
-            />
-    
-        </BackgroundContainer>
-
         <Footer />
     </Container>
   )

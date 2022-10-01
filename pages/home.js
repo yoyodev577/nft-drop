@@ -4,7 +4,6 @@ import Header from '../components/Header'
 import Minting from '../components/Minting'
 import RoadMap from './roadmap'
 import Footer from '../components/Footer'
-import About from './about'
 import Project from './project'
 import HomeContent from '../components/HomeContent'
 import Team from './team'
@@ -23,7 +22,6 @@ export default function HomePage () {
         <Container>
             <Cursor />
             <HomeContent />
-            <About />
             <Footer />
             <Cursor />
         </Container>
