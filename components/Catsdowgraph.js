@@ -5,6 +5,7 @@ import photo from "../assets/photo_01.png"
 import Minting from './Minting'
 import { Opensea } from './Opensea'
 
+
 const Container = tw.div`
     flex
     flex-col
@@ -59,10 +60,10 @@ const Catsdowgraph = () => {
             </BackgroundContainer>
 
 
-            <Content>Cats-dow-graph is a collection of 3333 NFTs  on the polygon blockchain.
-            <br /> Each shadowgraph is unique which owns Cat Servants Club's membership <br /> and grants access to member-only benefits.
+            <Content>Cats-dow-graph is a collection of 10000 NFTs  on the polygon blockchain.
+            <br /> Each shadowgraph is unique which owns Cat Servants Club's membership <br /> and grants access to members-only benefits.
             </Content>
-            <Opensea /> 
+           <Minting />
 
     </Container>
   )

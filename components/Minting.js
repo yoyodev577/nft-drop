@@ -102,7 +102,7 @@ const Minting = () => {
     }
 
     const viewOpenSea = () =>{
-        const contractAddress ="0x5769397437fC4f6C0E16692a9C1499a486878E59";
+        const contractAddress ="0x07F4cca5753076456926D0FC74B1F1c415641C54";
         const chain ="mumbai";
         const url=`https://testnets.opensea.io/assets/${chain}/${contractAddress}/${tokenId}`;
         window.open(url,"_blank");
