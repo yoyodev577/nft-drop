@@ -76,7 +76,7 @@ const Minting = () => {
     const disconnectWithMetamask = useDisconnect();
     const address = useAddress();
 
-    const contract = useNFTDrop("0x5769397437fC4f6C0E16692a9C1499a486878E59");
+    const contract = useNFTDrop("0x07F4cca5753076456926D0FC74B1F1c415641C54");
     const tokenId =0;
     const quantity = 1;
 

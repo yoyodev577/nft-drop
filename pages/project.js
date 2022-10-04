@@ -5,7 +5,7 @@ import photo from "../assets/photo_01.png"
 import Minting from '../components/Minting'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-import Catsdowgraph from '../components/catsdowgraph'
+import Catsdowgraph from '../components/Catsdowgraph'
 
 const Container = tw.div`
     flex
